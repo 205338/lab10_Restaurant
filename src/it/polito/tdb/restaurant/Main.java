@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
-import it.polito.tdb.restaurant.model.Model;
+import it.polito.tdb.restaurant.simulation.Core;
 
 public class Main extends Application {
 	@Override
@@ -17,9 +17,9 @@ public class Main extends Application {
 			BorderPane root = (BorderPane) loader.load();
 
 			// Set the model
-			Model model = new Model();
+			Core core = new Core();
 			RestaurantController controller = loader.getController();
-			controller.setModel(model);
+			controller.setCore(core);
 			
 			Scene scene = new Scene(root, 600, 400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

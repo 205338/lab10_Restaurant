@@ -3,7 +3,7 @@ package it.polito.tdb.restaurant;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import it.polito.tdb.restaurant.model.Model;
+import it.polito.tdb.restaurant.simulation.Core;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
@@ -19,7 +19,7 @@ public class RestaurantController {
     @FXML
     private TextArea txtResult;
 
-    private Model model;
+    private Core core;
     
     @FXML
     void doSimulation(ActionEvent event) {
@@ -32,8 +32,8 @@ public class RestaurantController {
         txtResult.setEditable(false);
     }
 
-	public void setModel(Model model) {
-		this.model = model;
+	public void setCore(Core core) {
+		this.core = core;
 	}
     
 }
