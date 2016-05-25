@@ -23,7 +23,11 @@ public class RestaurantController {
     
     @FXML
     void doSimulation(ActionEvent event) {
+    	core.generateEvents();
+    	core.setTables();
+    	core.simulate();
     	
+    	txtResult.setText(core.getStats());
     }
 
     @FXML
